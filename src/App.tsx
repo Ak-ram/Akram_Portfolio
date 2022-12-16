@@ -18,7 +18,7 @@ console.log(repos)
   }, [repos])
   return (
     <div className="flex">
-      
+
       <Sidebar
         onSidebarHide={() => {
           onSetShowSidebar(false);
