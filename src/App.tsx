@@ -6,7 +6,7 @@ import Content from "./Components/Content";
 const App = () => {
   const [showSidebar, onSetShowSidebar] = useState(false);
   return (
-   
+
       <div className="flex">
         <Sidebar
           onSidebarHide={() => {
