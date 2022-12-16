@@ -7,7 +7,7 @@ import { GITHUBOCTOKITAPICONTEXT } from "./Contexts/OCTOKITAPIContext";
 const App = () => {
   const [showSidebar, onSetShowSidebar] = useState(false);
   return (
-   
+
       <div className="flex">
         <Sidebar
           onSidebarHide={() => {
