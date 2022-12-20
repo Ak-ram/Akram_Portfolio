@@ -35,7 +35,7 @@ function Segmentation() {
                         >
                             {/* {c1 === 'JavaScript' && (
                                 <img src="https://assets.codepen.io/3685267/res-react-dash-user-card.svg" alt="" />
-                            
+
                             )} */}
                         </div>
                     </div>
