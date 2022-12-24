@@ -5,8 +5,8 @@ function MenuItem({ item: { id, title, notifications }, onClick }) {
   const location = useLocation();
   const currentRoute = location.pathname.slice(1, location.pathname.length);
   return (
-    
-    
+
+
 // 🐛 BUG: matching selected sidebarItem with the current route
 
 // Bug: When changing route directly from the URL bar, there is no updating in the selected sidbarItem.
