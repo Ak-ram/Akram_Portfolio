@@ -79,9 +79,9 @@ const App = () => {
                 />
                 <Route path="/search" element={<Search />} />
                 {['/','/about'].map((route,i)=>{
-                  
+
                return <Route key={i} path={route} element={<About />} />
-                  
+
                 })}
                 <Route path="/settings" element={<Settings />} />
                 <Route
