@@ -62,7 +62,7 @@ function NameCard({
           </svg>
         </div>
         <div className="flex flex-col items-center">
-        
+
           {rise ? <HiOutlineTrendingUp className="text-green-500" size={30} /> :<HiOutlineTrendingDown className="text-red-500" size={30}/>}
           <animated.div
             className={`${rise?"text-green-500":"text-red-500"} text-lg font-bold`}
