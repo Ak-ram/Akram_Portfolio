@@ -1,16 +1,29 @@
 import Steps from "./Steps";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsArrowRightShort, BsCheckCircle } from "react-icons/bs";
 import { IoIosClose } from "react-icons/io";
 import Calendar from "./Calendar";
 import Combobox from "./Combobox";
-const AddNewEvent = ({ setHidden }) => {
+import { eventType } from "./CalendarEvents";
+const AddNewEvent = ({ setHidden, setEventsList }) => {
   const [isCurrentStep, setCurrentStep] = useState<number | "Done">(1);
+  const [newEvent, setNewEvent] = useState<eventType>({
+    title: "",
+    isDone: false,
+    time: "",
+  });
   const numberOfSteps: number = 3;
   const handleCurrentStep = () => {
     if (+isCurrentStep < numberOfSteps) setCurrentStep(+isCurrentStep + 1);
     if (+isCurrentStep === numberOfSteps) setCurrentStep("Done");
     if (isCurrentStep === "Done") return;
+  };
+  const handleEventTitle = (e: React.SyntheticEvent) => {
+    setNewEvent({
+      ...newEvent,
+      title: (e.currentTarget as HTMLInputElement).value,
+    });
+    console.log(newEvent);
   };
   let StepOneContent = (
     <div className="w-full mt-8">
@@ -23,6 +36,7 @@ const AddNewEvent = ({ setHidden }) => {
       <input
         type="text"
         id="first_name"
+        onChange={(e) => handleEventTitle(e)}
         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm block w-full p-2.5 dark:bg-transparent dark:border-gray-600/30 dark:placeholder-gray-400 dark:text-white"
         placeholder="Type your event here..."
         required
