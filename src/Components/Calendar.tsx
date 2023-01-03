@@ -59,6 +59,7 @@ const Calendar = ({ daysClassName }) => {
               </span>
               <div className="flex items-center">
                 <button
+                  type="button"
                   onClick={() => {
                     setMonth(month - 1);
                     setDay(1);
@@ -69,6 +70,7 @@ const Calendar = ({ daysClassName }) => {
                   <BiChevronLeft size={25} />
                 </button>
                 <button
+                  type="button"
                   aria-label="calendar forward"
                   className="dark:hover:bg-gray-700 focus:text-gray-400 hover:text-gray-400 ml-3 text-gray-800 dark:text-gray-100"
                   onClick={() => {
