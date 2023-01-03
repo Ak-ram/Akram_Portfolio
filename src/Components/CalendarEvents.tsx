@@ -4,7 +4,7 @@ import EventStateComponent from "./EventStateComponent";
 
 export interface eventType {
   title: string;
-  isDone: boolean;
+  priority: "Do first" | "Schedule" | "Delegate";
   time: string;
 }
 const CalendarEvents = () => {
