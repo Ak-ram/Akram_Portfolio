@@ -30,10 +30,11 @@ const Combobox = ({ options }) => {
               value={value}
               name="select"
               id="select"
-              placeholder="Filter by"
+              placeholder="Choose option"
               className="dark:bg-transparent px-1.5 appearance-none outline-none text-gray-200 w-full"
             />
             <button
+              type="button"
               onClick={resetSearchValue}
               className="border-r dark:border-gray-700 cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-rose-400"
             >
