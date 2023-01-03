@@ -7,8 +7,7 @@ import Combobox from "./Combobox";
 import { eventType } from "./CalendarEvents";
 import { object } from "prop-types";
 const AddNewEvent = ({ setHidden, setEventsList }) => {
-  const titleInputFeildRef = useRef<any>();
-  const [selectedDate, setSelectedDate] = useState("");
+  const titleInputFeildRef = useRef<HTMLInputElement | null>(null);
   const [isCurrentStep, setCurrentStep] = useState<number | "Done">(1);
   const [newEvent, setNewEvent] = useState<eventType>({
     title: "",
@@ -20,13 +19,6 @@ const AddNewEvent = ({ setHidden, setEventsList }) => {
     if (+isCurrentStep < numberOfSteps) setCurrentStep(+isCurrentStep + 1);
     if (+isCurrentStep === numberOfSteps) setCurrentStep("Done");
     if (isCurrentStep === "Done") return;
-    setNewEvent({
-      ...newEvent,
-      title: titleInputFeildRef.current!.value,
-      time: selectedDate,
-    });
-    console.log(newEvent);
-  };
   // const handleEventTitle = (e: React.SyntheticEvent) => {
   //   setNewEvent({
   //     ...newEvent,
@@ -57,7 +49,6 @@ const AddNewEvent = ({ setHidden, setEventsList }) => {
     <>
       <span className="mt-3">Choose event day</span>
       <Calendar
-        setSelectedDate={setSelectedDate}
         daysClassName={"text-center"}
       />
     </>
@@ -117,4 +108,4 @@ const AddNewEvent = ({ setHidden, setEventsList }) => {
   );
 };
 
-export default AddNewEvent;
+export default AddNewEvent

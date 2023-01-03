@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { BiChevronRight, BiChevronLeft } from "react-icons/bi";
 import { IoIosClose } from "react-icons/io";
 
-const Calendar = ({ daysClassName, setSelectedDate }) => {
+const Calendar = ({ daysClassName }) => {
   const [isDateUpdate, setDateUpdate] = useState(false);
   const [sinceValue, setSinceValue] = useState(true);
   const [day, setDay] = useState(new Date().getDate());
@@ -32,7 +32,6 @@ const Calendar = ({ daysClassName, setSelectedDate }) => {
       year: y!,
       day: d!,
     });
-    setSelectedDate(res);
     return res;
   };
 
