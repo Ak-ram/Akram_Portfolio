@@ -54,7 +54,7 @@
 }
 /* .sidebar-item:hover { */
   /* color: #a1a0a0; */
-/* } */ 
+/* } */
 
 .text-ellipsis {
   text-overflow: ellipsis;
@@ -73,7 +73,7 @@
   transition: opacity 0.2s;
   opacity: 1;
 }
-/* 
+/*
 .pagination_selected_item:focus{
   color: red !important
 } */
